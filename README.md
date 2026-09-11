@@ -2,7 +2,25 @@
 
 Java backend for exam administration, automated grading, grading appeals, and wallet transactions.
 
-## Overview
+## Live demo
+
+**[Open the live application](https://autograding.103-77-243-209.sslip.io/login)**
+
+**[Hướng dẫn trải nghiệm và tài khoản cho tất cả vai trò](docs/DEMO_GUIDE.md)** — Admin, Exam Staff, Lecturer and three sample Students. Includes the exam paper, student ZIP downloads and a step-by-step walkthrough.
+
+Use **DEMO - Recruiter Playground → Practice Grading** to run grading on the three supplied submissions and inspect the results. The original **DEMO - Trial Test 01** remains a reference dataset. Paper code: **TRIAL01**. See the walkthrough above for public role credentials and sample downloads.
+
+| Sample submission | Score | Test cases passed |
+|---|---:|---:|
+| SE173222 | 7.77 / 10 | 8 / 9 |
+| SE173333 | 10 / 10 | 9 / 9 |
+| SE173444 | 0 / 10 | 0 / 9 |
+
+This demonstration uses **MODE_3** with 36 rubric criteria across three questions, weighted at **2.5 / 3.75 / 3.75** points. Test-case and hardcode guards can reduce a question score to zero. These are system-generated results under this configuration.
+
+Hosted on an **Ubuntu VPS** using **Docker Compose, Nginx, PostgreSQL, MinIO and Caddy with HTTPS**. The exam-upload, student-submission and grading workflow was verified through the API on **12 September 2026**. Email and payment integrations are not part of the verified demo. Please use the supplied sample data; this deployment is intended for trusted demonstrations.
+
+## Project overview
 
 The system manages exams and exam sessions, accepts student submissions, analyzes Java source structure, executes submitted JARs against test inputs, and records grading outcomes. Staff and lecturers can review appeals and monitor exam activity.
 
